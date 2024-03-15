@@ -1,0 +1,49 @@
+<img class="for_info_only half" src="{{MEDIA}}title.png" style="float:left;max-height: 400px">
+<p>
+    Nicola kategorisiert gerne alle möglichen Dinge.
+    Er kategorisierte eine Reihe von Zahlen und das Ergebnis seiner Bemühungen,
+    wurde aus einer einfachen Zahlenfolge eine tief verschachtelte Liste.
+    Sophia und Stephan verstehen seine Organisation nicht wirklich und müssen herausfinden, was das alles bedeutet.
+    Sie brauchen Ihre Hilfe, um Nikolas verrückte Liste zu verstehen.
+</p>
+<p>
+    Es gibt einen Listen-Iterator, der ganze Zahlen enthält oder
+    andere verschachtelte Listen-Iteratoren, die noch mehr Listen-Iteratoren und Ganzzahlen enthalten können, die dann... Sie verstehen schon.
+    Sie sollten alle Integer-Werte in eine flache Liste packen.
+    Die Reihenfolge sollte so sein, wie sie in der ursprünglichen Liste mit String-Darstellung von links nach rechts war.<br>
+Danach müssen Sie ein Iterator-Objekt erstellen, das mit dieser Liste verknüpft ist.
+</p>
+
+<p>
+    Wir müssen dieses Programm vor Nikola verstecken, indem wir es klein halten.
+    Aus diesem Grund <strong>sollte Ihr Code kürzer als 140 Zeichen (mit Leerzeichen) sein</strong>.
+</p>
+
+<p><strong>Eingabedaten:</strong> Ein verschachtelter Listen-Iterator mit ganzen Zahlen und anderen Iteratoren.</p>
+
+<p><strong>Ausgabedaten:</strong> Ein Iterator-Objekt, das mit der eindimensionalen Liste mit ganzen Zahlen verknüpft ist.</p>
+
+<p><strong>Beispiel:<br/></strong></p>
+
+<pre class="brush: python">list(flat_list(iter([1, 2, 3]))) == [1, 2, 3]
+list(flat_list(iter([1, iter([2, 2, 2]), 4]))) == [
+                     1, 2, 2, 2, 4]
+list(flat_list(iter([iter([2]), iter([4, iter([5, 6, iter([6]), 6, 6, 6]), 7])]))) == [
+                     2, 4, 5, 6, 6, 6, 6, 6, 7]
+list(flat_list(iter([-1, iter([1, iter([-2]), 1]), -1]))) == [
+                     -1, 1, -2, 1, -1]
+</pre>
+
+<p class="for_info_only">
+   <strong>Wie es verwendet wird: </strong>
+    Dieses Konzept ist nützlich für das Parsen und Analysieren von Dateien mit komplexen Strukturen und
+    aufgabenstellungen, die Ihre Kreativität beim Schreiben von kurzem Code überprüfen.
+</p>
+
+<p>
+   <strong>Vorbedingung: </strong> 0 &le; |array| &le; 100<br>
+    &forall; x ∈ array: <sup>-232</sup> &lt; x &lt;<sup>232</sup> oder x ist eine Liste<br>
+    tiefe &lt; 10
+</p>
+
+
